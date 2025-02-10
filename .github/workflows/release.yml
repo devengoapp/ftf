@@ -1,3 +1,10 @@
+---
+name: Release a new gem version
+
+"on":
+  push:
+    tags:
+      - v*.*.*
 jobs:
   push:
     name: Push gem to RubyGems.org
