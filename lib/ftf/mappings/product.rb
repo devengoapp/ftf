@@ -11,6 +11,10 @@ module FTF
         @holders = @data[:holders].map { |holder| Holder.new(holder, self) }
       end
 
+      def render(index)
+        Records::Product.new(index, self).render
+      end
+
       def action
         @data[:action]
       end

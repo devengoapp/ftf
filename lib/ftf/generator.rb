@@ -42,7 +42,7 @@ module FTF
       write_record(@report.render_header(@record_index))
 
       @report.products.each do |product|
-        write_record(product(product))
+        write_record(product.render(@record_index))
         product.holders.each do |holder|
           write_record(holder(holder))
           write_record(relationship(holder.relationship))
@@ -57,26 +57,6 @@ module FTF
     def write_record(record)
       @output.puts(record)
       @record_index += 1
-    end
-
-    def product(product)
-      fields = {
-        record_type: "10",
-        action: product.action,
-        fiscal_id: @report.fiscal_id,
-        record_index: @record_index.to_s.rjust(10, "0"),
-        type: product.type.to_s.rjust(2, "0"),
-        id_type: product.id_type.to_s.rjust(2, "0"),
-        id: product.id.to_s.rjust(38, " "),
-        created_at: product.created_at.ljust(8, " "),
-        canceled_at: product.canceled_at.to_s.ljust(8, " "),
-        transfered_at: product.transfered_at.to_s.ljust(8, " "),
-        transfered_entity_id: product.transfered_entity_id.to_s.ljust(20, " "),
-        lease_type: product.lease_type.to_s.ljust(1, " "),
-        lease_period: product.lease_period.to_s.ljust(4, " "),
-        reserved_field: " " * 137
-      }
-      fields.values.join
     end
 
     def holder(holder)
