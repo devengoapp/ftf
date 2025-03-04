@@ -86,13 +86,7 @@
               "type": "AUT", # New relationship
               "created_at": "20250301",
               "previous_type": "TIT" # Previous relationship
-            },
-            { # TODO: NOT SURE
-              "action": "M",
-              "type": "AUT",
-              "created_at": "20250303",
-              "canceled_at": "20250305" # Remove relation with this product
-            },
+            }
           ]
         }
       ]
