@@ -56,7 +56,7 @@
         },
       ],
       "holders": [
-        # ADD to product
+        # Data register 20 (holder) ADD to product
         {
           "action": "A",
           "name": "Teresa Rexach Gonzalez",
@@ -93,7 +93,7 @@
     }
   ],
   "holders": [
-    # MODIFY holders data only (NO relationships)
+    # Data register 20 - MODIFY holders data only (NO relationships)
     {
       "action": "M",
       "name": "Aitor Garcia Rey",
