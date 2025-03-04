@@ -43,6 +43,22 @@
         }
       ]
     },
+    # Data register 10 (product) DELETE IBAN
+    {
+      "action": "M",
+      "type": "01",
+      "id_type": "01",
+      "id": "ES8931906516575376987825",
+      "created_at": "20250101",
+      "ibans": [
+        # Data register 11 - Delete the number of a product
+        {
+          "action": "X",
+          "type": "01",
+          "id": "ES8931906516575376987800" # Number to DELETE from product
+        },
+      ]
+    },
   ],
   "holders": [
     # Any person remaining in the FTF not associated with any product will be automatically deleted.
