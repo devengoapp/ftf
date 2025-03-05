@@ -4,6 +4,7 @@
 {
   "fiscal_id": "B88353412",
   "period": "202501",
+  "file_index": 2,
   "request_id": "",
   "file_type": "C",
   "products": [
@@ -29,8 +30,10 @@
           "name": "Aitor Garcia Rey",
           "id_type": "01",
           "id": "22754545R", 
-          "country": "ES",
+          "expedition_country": "ES",
           "created_at": "19790513",
+          "nationality_country": "ES",
+          "residence_country": "ES",
           # Data register 30 (relationship product-holder) DELETE
           "relationships": [
             {

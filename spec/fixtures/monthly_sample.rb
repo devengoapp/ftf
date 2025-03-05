@@ -1,9 +1,10 @@
-# Mensual 
+# Monthly 
 # FTF_B88353412_202501_001.txt
 
 {
   "fiscal_id": "B88353412",
   "period": "202501",
+  "file_index": 1,
   "request_id": "",
   "file_type": "M",
   "products": [
@@ -21,8 +22,10 @@
           "name": "Aitor Garcia Rey",
           "id_type": "01", # Type: NIF
           "id": "22754545R", 
-          "country": "ES",
+          "expedition_country": "ES",
           "created_at": "19790513", # Birth date
+          "nationality_country": "ES",
+          "residence_country": "ES",
           # Data register 30 (relationship product-holder) ADD
           "relationships": [
             {
@@ -62,8 +65,10 @@
           "name": "Teresa Rexach Gonzalez",
           "id_type": "01",
           "id": "52898109H", 
-          "country": "ES",
+          "expedition_country": "ES",
           "created_at": "19901101",
+          "nationality_country": "ES",
+          "residence_country": "ES",
           # Data register 30 (relationship product-holder) ADD
           "relationship": {
             "action": "A",
@@ -77,8 +82,10 @@
           "name": "Aitor Garcia Rey",
           "id_type": "01",
           "id": "22754545R", 
-          "country": "ES",
+          "expedition_country": "ES",
           "created_at": "19790513",
+          "nationality_country": "ES",
+          "residence_country": "ES",
           # Data register 30 (relationship product-holder) MODIFY
           "relationships": [
             {
@@ -99,8 +106,10 @@
       "name": "Aitor Garcia Rey",
       "id_type": "01",
       "id": "22754545R", 
-      "country": "ES",
+      "expedition_country": "ES",
       "created_at": "19790513",
+      "nationality_country": "ES",
+      "residence_country": "ES",
       "names": [
         # Data register 21 - Changing / adding holder's name (type X only in complementary files)
         {

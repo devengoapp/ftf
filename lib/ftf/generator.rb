@@ -68,10 +68,10 @@ module FTF
         name: holder.name.to_s.ljust(178, " "),
         id_type: holder.id_type.to_s.rjust(2, "0"),
         id: holder.id.to_s.rjust(30, " "),
-        expedition_country: holder.country.to_s.rjust(2, " "),
+        expedition_country: holder.expedition_country.to_s.rjust(2, " "),
         created_at: holder.created_at.ljust(8, " "),
-        nationality_country: holder.country.to_s.rjust(2, " "),
-        residence_country: holder.country.to_s.rjust(2, " "),
+        nationality_country: holder.nationality_country.to_s.rjust(2, " "),
+        residence_country: holder.residence_country.to_s.rjust(2, " "),
         reserved_field: " " * 4
       }
       fields.values.join
