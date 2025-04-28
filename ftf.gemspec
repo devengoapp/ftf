@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "fiddle", "~> 1.1"
   spec.add_dependency "rdoc", "~> 6.11"
-  spec.add_dependency "zeitwerk", "~> 2.7"
+  spec.add_dependency "zeitwerk", ">= 2.6.0", "< 2.7.0"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
