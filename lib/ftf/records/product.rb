@@ -7,7 +7,7 @@ module FTF
         "10"
       end
 
-      def fields
+      def fields # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
         {
           action: data.action,
           fiscal_id: data.file.fiscal_id,
