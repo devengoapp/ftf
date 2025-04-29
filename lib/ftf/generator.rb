@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require "json"
 module FTF
   # Generate
-  class Generator
+  class Generator # rubocop:disable Metrics/ClassLength
     using Refinements
 
     def initialize(data)
@@ -10,7 +12,7 @@ module FTF
       validate!
     end
 
-    def validate!
+    def validate! # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
       if !@report.request_id.blank? && @report.file_type != ("C")
         raise "Files generated for a request id must be complementary (type C)"
       end
@@ -36,7 +38,7 @@ module FTF
       end
     end
 
-    def generate!
+    def generate! # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       @output = File.new(filename, "w", external_encoding: Encoding::ISO8859_1)
 
       write_record(@report.render_header(@record_index))
@@ -59,7 +61,7 @@ module FTF
       @record_index += 1
     end
 
-    def holder(holder)
+    def holder(holder) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       fields = {
         record_type: "20",
         action: holder.action,
@@ -77,7 +79,7 @@ module FTF
       fields.values.join
     end
 
-    def relationship(relationship)
+    def relationship(relationship) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       fields = {
         record_type: "30",
         action: relationship.action,
