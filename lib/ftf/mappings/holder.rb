@@ -8,7 +8,7 @@ module FTF
       def initialize(data, product)
         @data = data
         @product = product
-        @relationship = Relationship.new(@data[:relationship], self)
+        @relationship = Relationship.new(@data[:relationships].first, self)
       end
 
       def action
