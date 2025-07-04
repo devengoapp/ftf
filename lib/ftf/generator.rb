@@ -69,11 +69,11 @@ module FTF
         record_index: @record_index.to_s.rjust(10, "0"),
         name: holder.name.to_s.ljust(178, " "),
         id_type: holder.id_type.to_s.rjust(2, "0"),
-        id: holder.id.to_s.rjust(30, " "),
-        expedition_country: holder.country.to_s.rjust(2, " "),
+        id: holder.id.to_s.ljust(30, " "),
+        expedition_country: holder.country.to_s.ljust(2, " "),
         created_at: holder.created_at.ljust(8, " "),
-        nationality_country: holder.country.to_s.rjust(2, " "),
-        residence_country: holder.country.to_s.rjust(2, " "),
+        nationality_country: holder.country.to_s.ljust(2, " "),
+        residence_country: holder.country.to_s.ljust(2, " "),
         reserved_field: " " * 4
       }
       fields.values.join
@@ -101,7 +101,7 @@ module FTF
         record_index: @record_index.to_s.rjust(10, "0"),
         type: product.type.to_s.rjust(2, "0"),
         id_type: product.id_type.to_s.rjust(2, "0"),
-        id: product.id.to_s.rjust(38, " "),
+        id: product.id.to_s.ljust(38, " "),
         reserved_field: " " * 187
       }
       fields.values.join
