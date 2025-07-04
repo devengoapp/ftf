@@ -2,7 +2,9 @@
 name: Release a new gem version
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - fix-release-workflow
 
 jobs:
   push:
