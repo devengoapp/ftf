@@ -4,7 +4,7 @@ name: Release a new gem version
 on:
   push:
     branches:
-      - fix-release-workflow
+      - fix_gem_release
 
 jobs:
   push:
