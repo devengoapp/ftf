@@ -1,10 +1,9 @@
 ---
 name: Release a new gem version
 
-"on":
-  push:
-    tags:
-      - v*.*.*
+on:
+  workflow_dispatch:
+
 jobs:
   push:
     name: Push gem to RubyGems.org
