@@ -25,5 +25,3 @@ jobs:
 
       # Release
       - uses: rubygems/release-gem@v1
-        with:
-          rake-release: false
