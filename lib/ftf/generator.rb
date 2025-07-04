@@ -3,7 +3,7 @@
 require "json"
 module FTF
   # Generate
-  class Generator # rubocop:disable Metrics/ClassLength
+  class Generator
     using Refinements
 
     def initialize(data)
@@ -103,18 +103,6 @@ module FTF
         id_type: product.id_type.to_s.rjust(2, "0"),
         id: product.id.to_s.rjust(38, " "),
         reserved_field: " " * 187
-      }
-      fields.values.join
-    end
-
-    def footer
-      fields = {
-        record_type: "99",
-        fiscal_id: @report.fiscal_id,
-        record_index: @record_index.to_s.rjust(10, "0"),
-        product_records_count: "777".rjust(10, "0"), # fix
-        total_records_count: @record_index.to_s.rjust(10, "0"),
-        reserved_field: " " * 209
       }
       fields.values.join
     end
