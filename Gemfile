@@ -11,4 +11,6 @@ gem "rspec", "~> 3.0"
 
 gem "rubocop", "~> 1.21"
 
-gem "debug", "~> 1.8"
+group :development do
+  gem "debug", "~> 1.8"
+end
