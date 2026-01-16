@@ -1,0 +1,109 @@
+{
+  "fiscal_id": "B89896427",
+  "period": "202512",
+  "file_index": 1,
+  "request_id": "",
+  "file_type": "M",
+  "products": [
+    {
+      "action": "A",
+      "type": "01",
+      "id_type": "01",
+      "id": "ES7531602870987210103471",
+      "created_at": "20251201",
+      "holders": [
+        {
+          "action": "A",
+          "name": "WESIZE SL",
+          "id_type": "01",
+          "id": "A72605108",
+          "created_at": "20251113",
+          "country": "ES",
+          "expedition_country": "ES",
+          "nationality_country": "ES",
+          "residence_country": "ES",
+          "relationships": [
+            {
+              "action": "A",
+              "type": "TIT",
+              "created_at": "20251201"
+            }
+          ]
+        },
+        {
+          "action": "A",
+          "name": "Antonio García López",
+          "id_type": "01",
+          "id": "99971126Q",
+          "created_at": "19810213",
+          "country": "ES",
+          "expedition_country": "ES",
+          "nationality_country": "ES",
+          "residence_country": "ES",
+          "relationships": [
+            {
+              "action": "A",
+              "type": "TRE",
+              "created_at": "20251215"
+            },
+            {
+              "action": "A",
+              "type": "REP",
+              "created_at": "20251215"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "action": "A",
+      "type": "01",
+      "id_type": "01",
+      "id": "ES1600853664879672604126",
+      "created_at": "20251201",
+      "holders": [
+        {
+          "action": "A",
+          "name": "DOMIMINT SL",
+          "id_type": "04",
+          "id": "GB633223668",
+          "created_at": "20230129",
+          "country": "GB",
+          "expedition_country": "ES",
+          "nationality_country": "GB",
+          "residence_country": "GB",
+          "relationships": [
+            {
+              "action": "A",
+              "type": "TIT",
+              "created_at": "20251201"
+            }
+          ]
+        },
+        {
+          "action": "A",
+          "name": "Benicio Mathews",
+          "id_type": "02",
+          "id": "Y3777307P",
+          "created_at": "19880604",
+          "country": "IT",
+          "expedition_country": "IT",
+          "nationality_country": "IT",
+          "residence_country": "GB",
+          "relationships": [
+            {
+              "action": "A",
+              "type": "TRE",
+              "created_at": "20251222"
+            },
+            {
+              "action": "A",
+              "type": "REP",
+              "created_at": "20251222"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

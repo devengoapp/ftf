@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require "json"
+require "debug"
+
 module FTF
   # Generate
   class Generator
