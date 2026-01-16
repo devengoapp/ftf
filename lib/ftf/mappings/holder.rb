@@ -31,8 +31,16 @@ module FTF
         @data[:created_at]
       end
 
-      def country
-        @data[:country]
+      def expedition_country
+        @data[:expedition_country]
+      end
+
+      def nationality_country
+        @data[:nationality_country]
+      end
+
+      def residence_country
+        @data[:residence_country]
       end
     end
   end
