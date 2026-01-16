@@ -49,7 +49,9 @@ module FTF
         write_record(product.render(@record_index))
         product.holders.each do |holder|
           write_record(holder(holder))
-          write_record(relationship(holder.relationship))
+          holder.relationships.each do |relationship|
+            write_record(relationship(relationship))
+          end
         end
         write_record(product_footer(product))
       end

@@ -3,12 +3,12 @@
 module FTF
   module Mappings
     class Holder
-      attr_reader :product, :relationship
+      attr_reader :product, :relationships
 
       def initialize(data, product)
         @data = data
         @product = product
-        @relationship = Relationship.new(@data[:relationships].first, self)
+        @relationships = @data[:relationships].map { |relationship| Relationship.new(relationship, self) }
       end
 
       def action
