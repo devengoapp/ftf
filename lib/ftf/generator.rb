@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 require "json"
+
 module FTF
   # Generate
-  class Generator # rubocop:disable Metrics/ClassLength
+  class Generator
     using Refinements
 
     def initialize(data)
@@ -47,7 +48,9 @@ module FTF
         write_record(product.render(@record_index))
         product.holders.each do |holder|
           write_record(holder(holder))
-          write_record(relationship(holder.relationship))
+          holder.relationships.each do |relationship|
+            write_record(relationship(relationship))
+          end
         end
         write_record(product_footer(product))
       end
@@ -69,11 +72,11 @@ module FTF
         record_index: @record_index.to_s.rjust(10, "0"),
         name: holder.name.to_s.ljust(178, " "),
         id_type: holder.id_type.to_s.rjust(2, "0"),
-        id: holder.id.to_s.rjust(30, " "),
-        expedition_country: holder.country.to_s.rjust(2, " "),
+        id: holder.id.to_s.ljust(30, " "),
+        expedition_country: holder.expedition_country.to_s.ljust(2, " "),
         created_at: holder.created_at.ljust(8, " "),
-        nationality_country: holder.country.to_s.rjust(2, " "),
-        residence_country: holder.country.to_s.rjust(2, " "),
+        nationality_country: holder.nationality_country.to_s.ljust(2, " "),
+        residence_country: holder.residence_country.to_s.ljust(2, " "),
         reserved_field: " " * 4
       }
       fields.values.join
@@ -101,20 +104,8 @@ module FTF
         record_index: @record_index.to_s.rjust(10, "0"),
         type: product.type.to_s.rjust(2, "0"),
         id_type: product.id_type.to_s.rjust(2, "0"),
-        id: product.id.to_s.rjust(38, " "),
+        id: product.id.to_s.ljust(38, " "),
         reserved_field: " " * 187
-      }
-      fields.values.join
-    end
-
-    def footer
-      fields = {
-        record_type: "99",
-        fiscal_id: @report.fiscal_id,
-        record_index: @record_index.to_s.rjust(10, "0"),
-        product_records_count: "777".rjust(10, "0"), # fix
-        total_records_count: @record_index.to_s.rjust(10, "0"),
-        reserved_field: " " * 209
       }
       fields.values.join
     end
