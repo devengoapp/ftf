@@ -1,32 +1,43 @@
 ---
-name: Release a new gem version
+name: release
 
 "on":
   push:
     tags:
       - v*.*.*
+
+permissions: {}
+
 jobs:
-  push:
-    name: Push gem to RubyGems.org
-    runs-on: ubuntu-latest
-
+  ci:
+    uses: $/.github/workflows/ci.yml
     permissions:
-      # Required for trusted publishing.
-      id-token: write
-      # Required for `rake release` to push the release tag.
-      contents: write
+      contents: read
 
+  publish:
+    needs: ci
+    runs-on: ubuntu-latest
+    environment:
+      name: release
+      url: https://rubygems.org/gems/ftf
+    permissions:
+      contents: read
+      id-token: write
     steps:
-      # Set up
-      # yamllint disable-line rule:line-length
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      - name: Checkout Code
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check the tag is on main
+        run: git merge-base --is-ancestor "$GITHUB_SHA" origin/main
       - name: Set up Ruby
         # yamllint disable-line rule:line-length
         uses: ruby/setup-ruby@de492cf36cbab201753d720ce4f4e336cd688c94  # v1.336.0
-        with:
-          bundler-cache: true
-          ruby-version: ruby
-
-      # Release
-      # yamllint disable-line rule:line-length
-      - uses: rubygems/release-gem@7f9650160c1a4e7989fdc9855807bdbd421d8b6b  # v1.4.1
+      # No bundler cache: a poisoned cache would end up in the published gem.
+      - name: Install dependencies
+        run: bundle install
+      - name: Release Gem
+        # yamllint disable-line rule:line-length
+        uses: rubygems/release-gem@7f9650160c1a4e7989fdc9855807bdbd421d8b6b  # v1.4.1

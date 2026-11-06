@@ -40,8 +40,22 @@ jobs:
         # yamllint disable-line rule:line-length
         uses: actionshub/yamllint@00f4f7f756a93a38e77ea1af41a46b48fd893dcd  # v1.8.3
 
+  zizmor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        # yamllint disable-line rule:line-length
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Run zizmor
+        # yamllint disable-line rule:line-length
+        uses: zizmorcore/zizmor-action@45d7276c9ca790aabd705e31ca99c6185c3e76dd  # v0.8.1
+        with:
+          advanced-security: false
+
   build:
-    needs: [markdownlint-cli, yamllint]
+    needs: [markdownlint-cli, yamllint, zizmor]
     runs-on: ubuntu-latest
     name: Ruby ${{ matrix.ruby-version }}
     strategy:

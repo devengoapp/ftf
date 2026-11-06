@@ -75,7 +75,22 @@ TODO: Write usage instructions here
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`.
+
+## Release
+
+To release a new version, on the main branch update the version number in `version.rb`, then:
+
+```sh
+bundle install
+git add .
+git commit -m 'Bump to vX.X.X'
+git push origin main
+git tag vX.X.X main
+git push origin vX.X.X
+```
+
+The tag triggers `release.yml`: it runs CI, checks the tag is on `main` and publishes the gem to [rubygems.org](https://rubygems.org) through [trusted publishing](https://guides.rubygems.org/trusted-publishing/), with no API key.
 
 ## Contributing
 
