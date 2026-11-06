@@ -5,12 +5,10 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in ftf.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
-
-gem "rspec", "~> 3.0"
-
-gem "rubocop", "~> 1.21"
+gem "rake", "~> 13.4"
+gem "rspec", "~> 3.13"
+gem "rubocop", "~> 1.92"
 
 group :development do
-  gem "debug", "~> 1.8"
+  gem "debug", "~> 1.11"
 end

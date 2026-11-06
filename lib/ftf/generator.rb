@@ -14,10 +14,10 @@ module FTF
     end
 
     def validate! # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength,Metrics/PerceivedComplexity
-      if !@report.request_id.blank? && @report.file_type != ("C")
+      if !@report.request_id.blank? && @report.file_type != "C"
         raise "Files generated for a request id must be complementary (type C)"
       end
-      if @report.products.empty? && @report.file_type != ("N")
+      if @report.products.empty? && @report.file_type != "N"
         raise "Files generated without product records must be negative (type N)"
       end
       if !@report.products.empty? && !%w[M C].include?(@report.file_type)
