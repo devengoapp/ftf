@@ -1,0 +1,67 @@
+{
+  "fiscal_id": "A00000000",
+  "period": "202610",
+  "index": 2,
+  "file_type": "M",
+  "products": [
+    {
+      "action": "A",
+      "type": "05",
+      "id_type": "01",
+      "id": "ES0000000000000000000001",
+      "created_at": "20261003",
+      "holders": [
+        {
+          "action": "A",
+          "name": "Muñoz Peña, Begoña",
+          "id_type": "01",
+          "id": "00000000T",
+          "created_at": "20261003",
+          "expedition_country": "ES",
+          "nationality_country": "ES",
+          "residence_country": "ES",
+          "relationships": [
+            { "action": "A", "type": "TIT", "created_at": "20261003" }
+          ]
+        },
+        {
+          "action": "A",
+          "name": "Example Holding Company Ltd",
+          "id_type": "04",
+          "id": "GB000000000",
+          "created_at": "20261003",
+          "expedition_country": "GB",
+          "nationality_country": "GB",
+          "residence_country": "GB",
+          "relationships": [
+            { "action": "A", "type": "TRE", "created_at": "20261003" },
+            { "action": "A", "type": "AUT", "created_at": "20261005" }
+          ]
+        }
+      ]
+    },
+    {
+      "action": "M",
+      "type": "05",
+      "id_type": "01",
+      "id": "ES0000000000000000000002",
+      "created_at": "20250115",
+      "canceled_at": "20261028",
+      "holders": [
+        {
+          "action": "M",
+          "name": "Pérez Gómez, José",
+          "id_type": "01",
+          "id": "00000001R",
+          "created_at": "20250115",
+          "expedition_country": "ES",
+          "nationality_country": "ES",
+          "residence_country": "FR",
+          "relationships": [
+            { "action": "M", "type": "TIT", "created_at": "20250115", "canceled_at": "20261028" }
+          ]
+        }
+      ]
+    }
+  ]
+}

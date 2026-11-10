@@ -1,0 +1,30 @@
+{
+  "fiscal_id": "A00000000",
+  "period": "202609",
+  "file_type": "C",
+  "request_id": "REQ000000000001",
+  "products": [
+    {
+      "action": "A",
+      "type": "05",
+      "id_type": "01",
+      "id": "ES0000000000000000000003",
+      "created_at": "20260912",
+      "holders": [
+        {
+          "action": "A",
+          "name": "Ibáñez Núñez, Iñaki",
+          "id_type": "02",
+          "id": "PAS000000",
+          "created_at": "20260912",
+          "expedition_country": "ES",
+          "nationality_country": "ES",
+          "residence_country": "ES",
+          "relationships": [
+            { "action": "A", "type": "TIT", "created_at": "20260912" }
+          ]
+        }
+      ]
+    }
+  ]
+}
