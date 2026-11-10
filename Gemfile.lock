@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ftf (0.0.9)
+    ftf (0.1.0)
       zeitwerk (~> 2.6)
 
 GEM
